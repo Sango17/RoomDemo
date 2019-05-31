@@ -1,14 +1,12 @@
 package com.alexandreseneviratne.roomdemo
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.alexandreseneviratne.roomdemo.adapter.ContactAdapter
 import com.alexandreseneviratne.roomdemo.fragment.AddContactDialogFragment
 import com.alexandreseneviratne.roomdemo.model.Contact
@@ -30,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         adapter = ContactAdapter(contacts)
         recycler_view.layoutManager = LinearLayoutManager(this)
+        recycler_view.itemAnimator = DefaultItemAnimator()
         recycler_view.adapter = adapter
 
         adapter.notifyDataSetChanged()
