@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.alexandreseneviratne.roomdemo.R
-import com.alexandreseneviratne.roomdemo.model.Contact
+import com.alexandreseneviratne.roomdemo.model.entity.Contact
 
 class ContactAdapter(private val contactList: MutableList<Contact>)
     : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
